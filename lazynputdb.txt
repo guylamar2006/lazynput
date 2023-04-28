@@ -1234,11 +1234,12 @@ devices
             a=b1 b=b2 x=b0 y=b3 l1=b4 r1=b5 l2=b6 r2=b7
             ls=b10 rs=b11 select=b8 home=b12 capture=b13
     }
-
+# Vendor ID 2563 : ShenZhen ShanWan Technology Co., Ltd.
     2563.0523 : 0810.0001 {}
 
     2563.0526
     {
+        name = "Core (Plus) Wired Controller"
         interfaces = basic_gamepad extended_gamepad
         # Cheap USB controllers, labels may be playstation or xbox.
         default:
@@ -1247,10 +1248,17 @@ devices
             select=b10 start=b11 home=b12 ls=b13 rs=b14
     }
 
-    # TODO: 2563.0575
-    # Can be a PS3 knockoff controller or a Neo-Geo mini pad. Those are too different to have the same mappings.
-    # It needs a way to differentiate between controllers.
-
+    2563.0575
+   {
+        name = "ZD-V+ Wired Gaming Controller"
+        interfaces = basic_gamepad extended_gamepad
+        # Cheap USB controllers, labels may be playstation or xbox.
+        default:
+            dpx=h0x dpy=h0y lsx=a0 lsy=a1 rsx=a3 rsy=a4
+            a=b0 b=b1 x=b3 y=b4 l1=b6 r1=b7 l2=b8 r2=b9
+            select=b10 start=b11 home=b12 ls=b13 rs=b14
+    }
+    
     # Vendor ID 2dc8 : 8Bitdo
     2dc8.0651
     {
